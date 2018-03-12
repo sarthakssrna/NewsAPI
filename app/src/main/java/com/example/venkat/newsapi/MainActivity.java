@@ -1,5 +1,6 @@
 package com.example.venkat.newsapi;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_favourite:
                 Toast.makeText(MainActivity.this,"You Have selected Favourtite action",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this,Favourite.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
